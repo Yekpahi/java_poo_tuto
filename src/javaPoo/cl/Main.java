@@ -1,15 +1,18 @@
 package javaPoo.cl;
 
-public class Main extends Body {
+public class Main {
 
 	public static void main(String[] args) {
 
-		Main org = new Main();
-		org.nom = "Bras";
-		
-		org.myOrg();
-		
-		System.out.println(org.nom);
+	OuterClass outter = new OuterClass();
+	
+	OuterClass.InnerClass inner = outter.new InnerClass();
+	
+	outter.x = 12;
+	inner.str = "My classe interne";
+	
+	System.out.println(outter.x);
+	System.out.println(inner.str);
 	}
 
 }
